@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="580.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormConrtroller">
+   <children>
+      <ImageView fitHeight="580.0" fitWidth="1003.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/50-Beautiful-and-Minimalist-Presentation-Backgrounds-018.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="580.0" prefWidth="174.0" style="-fx-background-color: #342D7E;">
+         <children>
+            <ImageView fitHeight="81.0" fitWidth="134.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/PicsArt_09-20-11.24.06.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnAddCustomer" focusTraversable="false" layoutX="7.0" layoutY="147.0" onAction="#opeanAddCustomer" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text=" Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnUses" focusTraversable="false" layoutX="7.0" layoutY="378.0" onAction="#opeanUses" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Uses" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnPayment" focusTraversable="false" layoutX="7.0" layoutY="425.0" onAction="#opeanPayment" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnLogOut" focusTraversable="false" layoutX="54.0" layoutY="535.0" onAction="#btnLogOut" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #E5E4E2;" text="Log Out">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+
+                     </light>
+                  </Lighting>
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnHome" focusTraversable="false" layoutX="7.0" layoutY="102.0" onAction="#opeanAddHome" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnServiceCard" focusTraversable="false" layoutX="7.0" layoutY="287.0" onAction="#opeanServiceCard" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Service Card" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/home_filled_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/add-student-6c58b4c62c6cd6916fbe673ca2960b95.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/id_card_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/3395147-200.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/xxx037-512.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnTable" focusTraversable="false" layoutX="7.0" layoutY="332.0" onAction="#opeanItemTable" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="10.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/oil-pressure-automobile-vehicle-car-panel-automotive-512.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnServiceType" focusTraversable="false" layoutX="7.0" layoutY="241.0" onAction="#opeanServicetype" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Service Type" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/service_reminder_indicator_100px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnVehical" focusTraversable="false" layoutX="7.0" layoutY="193.0" onAction="#opeanVehical" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #C0C0C0;" text="Vehical" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="11.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/van_filled_100px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root1" layoutX="174.0" prefHeight="580.0" prefWidth="829.0" />
+   </children>
+</AnchorPane>

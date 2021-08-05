@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceTypeFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="187.0" layoutY="16.0" prefHeight="83.0" prefWidth="455.0" style="-fx-border-color: #000080;" text="Service Type" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="39.0" layoutY="106.0" opacity="0.91" prefHeight="439.0" prefWidth="752.0" style="-fx-background-color: rgba(55,55,55,0.5);">
+         <children>
+            <JFXTextField fx:id="txtTypeId" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="56.0" layoutY="51.0" onAction="#getDetaOnAction" prefHeight="25.0" prefWidth="145.0" promptText="Type ID" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtdetails" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="552.0" layoutY="51.0" prefHeight="25.0" prefWidth="145.0" promptText="Details" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtName" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="304.0" layoutY="51.0" prefHeight="25.0" prefWidth="145.0" promptText="Name" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <TableView fx:id="tblServiceType" focusTraversable="false" layoutX="55.0" layoutY="154.0" prefHeight="253.0" prefWidth="642.0" style="-fx-border-color: #000080; -fx-background-color: #BCC6CC;">
+              <columns>
+                <TableColumn fx:id="colTypeID" prefWidth="119.0" text="Type ID" />
+                <TableColumn fx:id="colName" prefWidth="105.0" text="Name" />
+                  <TableColumn fx:id="colDetails" prefWidth="293.0" text="Details" />
+                  <TableColumn fx:id="colOperate" prefWidth="123.0" text="Oprerate" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnAdd" focusTraversable="false" layoutX="539.0" layoutY="95.0" onAction="#saveOnAction" opacity="0.85" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #000080;" text="Add" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnUpdate" focusTraversable="false" layoutX="626.0" layoutY="95.0" onAction="#UpdateOnAction" opacity="0.85" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #000080;" text="Update" textFill="WHITE" />
+         </children></AnchorPane>
+      <ImageView fitHeight="68.0" fitWidth="82.0" layoutX="201.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/service_reminder_indicator_100px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

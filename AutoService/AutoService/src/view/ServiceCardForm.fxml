@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceCardFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="179.0" layoutY="19.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="82.0" prefWidth="472.0" style="-fx-border-color: #810541;" text="Service Card" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="95.0" layoutX="188.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/3395147-200.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="54.0" layoutY="124.0" opacity="0.91" prefHeight="417.0" prefWidth="721.0" style="-fx-background-color: rgba(55,55,55,0.5);">
+         <children>
+            <TableView fx:id="tblServicecard" focusTraversable="false" layoutX="47.0" layoutY="162.0" prefHeight="233.0" prefWidth="663.0" style="-fx-background-color: #E5E4E2; -fx-border-color: #0000A0;">
+              <columns>
+                <TableColumn fx:id="colScardID" prefWidth="109.0" text="ScardID" />
+                <TableColumn fx:id="coldate" prefWidth="91.0" text="date" />
+                  <TableColumn fx:id="colCID" prefWidth="75.0" text="CID" />
+                  <TableColumn fx:id="colVnum" prefWidth="65.0" text="Vnum" />
+                  <TableColumn fx:id="colUsesCode" prefWidth="82.0" text="UsesCode" />
+                  <TableColumn fx:id="colTypeID" prefWidth="100.0" text="TypeID" />
+                  <TableColumn fx:id="colOperate" prefWidth="139.0" text="Operate" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnAdd" focusTraversable="false" layoutX="602.0" layoutY="122.0" onAction="#SaveOnAction" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #EBF4FA;" text="Add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXTextField fx:id="txtSID" alignment="CENTER" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="36.0" layoutY="23.0" prefHeight="31.0" prefWidth="114.0" promptText="SID" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtDate" alignment="CENTER" editable="false" focusColor="WHITE" labelFloat="true" layoutX="278.0" layoutY="23.0" prefHeight="31.0" prefWidth="114.0" promptText="Date" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTime" alignment="CENTER" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="572.0" layoutY="23.0" prefHeight="31.0" prefWidth="114.0" promptText="Time" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmdCID" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="36.0" layoutY="69.0" onAction="#cmIdOnAction" prefHeight="31.0" prefWidth="70.0" promptText="CID" style="-jfx-focus-color: white;" stylesheets="@styles/Styles.css" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="cmdVnum" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="210.0" layoutY="69.0" onAction="#cmVnumOnAction" prefHeight="31.0" prefWidth="70.0" promptText="Vnum" style="-jfx-focus-color: white;" unFocusColor="WHITE">
+               <styleClass>
+                  <String fx:value="cmb1" />
+                  <String fx:value="cmb1" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@styles/Styles.css" />
+                  <URL value="@styles/Styles.css" />
+               </stylesheets>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtCID" alignment="CENTER" focusColor="WHITE" focusTraversable="false" layoutX="123.0" layoutY="70.0" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtVnum" alignment="CENTER" focusColor="WHITE" focusTraversable="false" layoutX="289.0" layoutY="69.0" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmdUseCode" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="378.0" layoutY="69.0" onAction="#getUsesCodeOnAction" prefHeight="31.0" prefWidth="70.0" promptText="UsesCode" style="-jfx-focus-color: white;" unFocusColor="WHITE">
+               <styleClass>
+                  <String fx:value="cmb1" />
+                  <String fx:value="cmb1" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@styles/Styles.css" />
+                  <URL value="@styles/Styles.css" />
+               </stylesheets>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtUseCode" alignment="CENTER" focusColor="WHITE" focusTraversable="false" layoutX="457.0" layoutY="69.0" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmdTypeId" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="537.0" layoutY="69.0" onAction="#getTypeID" prefHeight="31.0" prefWidth="70.0" promptText="TypeID" style="-jfx-focus-color: white;" unFocusColor="WHITE">
+               <styleClass>
+                  <String fx:value="cmb1" />
+                  <String fx:value="cmb1" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@styles/Styles.css" />
+                  <URL value="@styles/Styles.css" />
+               </stylesheets>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtTypeId" alignment="CENTER" focusColor="WHITE" focusTraversable="false" layoutX="616.0" layoutY="69.0" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

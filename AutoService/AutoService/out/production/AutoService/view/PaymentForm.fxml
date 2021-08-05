@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PayementFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="199.0" layoutY="14.0" prefHeight="69.0" prefWidth="432.0" style="-fx-border-color: #000080;" text="Payment Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="213.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/xxx037-512.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="47.0" layoutY="142.0" opacity="0.91" prefHeight="391.0" prefWidth="735.0" style="-fx-background-color: rgba(55,55,55,0.5);">
+         <children>
+            <Label layoutX="38.0" layoutY="14.0" prefHeight="27.0" prefWidth="40.0" text=" PID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="505.0" layoutY="57.0" text="Vnum :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblPayment" focusTraversable="false" layoutX="39.0" layoutY="144.0" prefHeight="194.0" prefWidth="658.0" style="-fx-background-color: #E5E4E2;">
+              <columns>
+                <TableColumn fx:id="colScardId" prefWidth="121.0" text="ScardID " />
+                <TableColumn fx:id="colCid" prefWidth="130.0" text="CID " />
+                  <TableColumn fx:id="colVnum" prefWidth="169.0" text="Vnum " />
+                  <TableColumn fx:id="colUseCode" prefWidth="111.0" text="Use Code " />
+                  <TableColumn fx:id="colTotal" prefWidth="126.0" text="Total" />
+              </columns>
+            </TableView>
+            <Label layoutX="12.0" layoutY="350.0" prefHeight="27.0" prefWidth="59.0" text="TOTAL :" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="350.0" prefHeight="27.0" prefWidth="86.0" />
+            <JFXTextField fx:id="txtSID" focusColor="WHITE" focusTraversable="false" layoutX="180.0" layoutY="59.0" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtVnum" focusColor="WHITE" focusTraversable="false" layoutX="566.0" layoutY="57.0" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: white;" unFocusColor="BLACK" />
+          
+            <Label focusTraversable="false" layoutX="39.0" layoutY="107.0" text="Use Code :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUseCode" focusColor="WHITE" focusTraversable="false" layoutX="121.0" layoutY="107.0" onAction="#getUses" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <Label focusTraversable="false" layoutX="344.0" layoutY="57.0" text="CID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCID" focusColor="WHITE" focusTraversable="false" layoutX="387.0" layoutY="57.0" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <Label focusTraversable="false" layoutX="268.0" layoutY="107.0" text="Total :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtTotal" focusColor="WHITE" focusTraversable="false" layoutX="323.0" layoutY="107.0" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXButton fx:id="btnAdd" focusTraversable="false" layoutX="494.0" layoutY="98.0" onAction="#SaveDetaOnAction" prefHeight="34.0" prefWidth="68.0" style="-fx-background-color: #EBF4FA;" text="Add">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnRemove" focusTraversable="false" layoutX="580.0" layoutY="98.0" prefHeight="37.0" prefWidth="86.0" style="-fx-background-color: #EBF4FA;" text="Remove">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtPID" focusColor="WHITE" layoutX="87.0" layoutY="15.0" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXComboBox fx:id="cmbServiceCard" focusColor="BLACK" labelFloat="true" layoutX="42.0" layoutY="57.0" onAction="#cmbServiceCardOnAction" prefHeight="25.0" prefWidth="102.0" promptText="Service Card Id" unFocusColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <Label focusTraversable="false" layoutX="149.0" layoutY="59.0" text=" :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="671.0" layoutY="104.0" prefHeight="27.0" prefWidth="111.0" style="-fx-border-color: black;" textFill="WHITE" />
+      <Label fx:id="lblDate" alignment="CENTER" focusTraversable="false" layoutX="47.0" layoutY="104.0" prefHeight="27.0" prefWidth="145.0" style="-fx-border-color: black;" textFill="WHITE" />
+   </children>
+</AnchorPane>

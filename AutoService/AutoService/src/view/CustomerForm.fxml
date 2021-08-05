@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CustomerForm" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <AnchorPane layoutX="42.0" layoutY="96.0" opacity="0.91" prefHeight="451.0" prefWidth="758.0" style="-fx-background-color: rgba(55,55,55,0.5);">
+         <children>
+            <TableView fx:id="tblCustomer" focusTraversable="false" layoutX="62.0" layoutY="154.0" prefHeight="211.0" prefWidth="618.0" style="-fx-background-color: #BCC6CC#BCC6CC; -fx-border-color: #000080;">
+              <columns>
+                <TableColumn fx:id="colCustomerID" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="colCustomerName" prefWidth="94.0" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="133.0" text="Address" />
+                  <TableColumn fx:id="colContact" prefWidth="113.0" text="ContactNo" />
+                  <TableColumn fx:id="colOperate" prefWidth="201.0" text="Operate" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnAddCustomer" focusTraversable="false" layoutX="609.0" layoutY="71.0" onAction="#saveOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #EBF4FA;" text="Add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtId" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="44.0" layoutY="21.0" onAction="#getdetaOnAction" promptText="ID" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtName" focusColor="#eeeff2" focusTraversable="false" labelFloat="true" layoutX="213.0" layoutY="21.0" promptText="Name" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtAddress" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="379.0" layoutY="21.0" promptText="Address" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtContac" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="548.0" layoutY="21.0" promptText="Contact Number" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXButton fx:id="btnUpdat" focusTraversable="false" layoutX="523.0" layoutY="71.0" onAction="#updateOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #EBF4FA;" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="127.0" layoutY="14.0" prefHeight="69.0" prefWidth="539.0" style="-fx-border-color: #000080;" text="Customer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="81.0" layoutX="139.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../asserts/add-student-6c58b4c62c6cd6916fbe673ca2960b95.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

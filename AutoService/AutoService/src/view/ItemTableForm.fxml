@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemTableFormController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="115.0" opacity="0.91" prefHeight="451.0" prefWidth="758.0" style="-fx-background-color: rgba(55,55,55,0.5);">
+         <children>
+            <JFXTextField fx:id="txtcode" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="36.0" layoutY="29.0" onAction="#getItem" prefHeight="25.0" prefWidth="150.0" promptText="Item Code" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtdescription" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="219.0" layoutY="29.0" prefHeight="25.0" prefWidth="150.0" promptText="Description" style="-fx-background-color: white;" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtqty" focusTraversable="false" labelFloat="true" layoutX="568.0" layoutY="29.0" prefHeight="25.0" prefWidth="150.0" promptText="Qty" style="-fx-background-color: white;" />
+            <JFXTextField fx:id="txtuniteprice" focusTraversable="false" labelFloat="true" layoutX="392.0" layoutY="29.0" prefHeight="25.0" prefWidth="150.0" promptText="Unit Price" style="-fx-background-color: white;" />
+            <TableView fx:id="itemtable" focusTraversable="false" layoutX="36.0" layoutY="117.0" prefHeight="305.0" prefWidth="683.0" style="-fx-border-color: Blue;">
+              <columns>
+                <TableColumn fx:id="colItemCode" prefWidth="84.0" text="Item Code" />
+                <TableColumn fx:id="colItemDescription" prefWidth="290.0" text="Description" />
+                  <TableColumn fx:id="colItemUnitPrice" prefWidth="117.0" text="Unit Price" />
+                  <TableColumn fx:id="colItemQty" prefWidth="78.0" text="Qty" />
+                  <TableColumn fx:id="colItemOperate" prefWidth="113.0" text="Operate" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnAdd" focusTraversable="false" layoutX="577.0" layoutY="72.0" onAction="#SaveOnActoin" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #EBF4FA;" text="Add" />
+            <JFXButton focusTraversable="false" layoutX="658.0" layoutY="72.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #EBF4FA;" text="Update" />
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="186.0" layoutY="14.0" prefHeight="91.0" prefWidth="458.0" style="-fx-border-color: #000080;" text="Item Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="83.0" fitWidth="74.0" layoutX="197.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/oil-pressure-automobile-vehicle-car-panel-automotive-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

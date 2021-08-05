@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <Label alignment="CENTER" focusTraversable="false" layoutX="142.0" layoutY="7.0" prefHeight="83.0" prefWidth="545.0" style="-fx-border-color: white;" text="Dash Board" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="58.0" fitWidth="83.0" layoutX="166.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/details_popup_100px.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_CENTER" layoutX="407.0" layoutY="297.0" prefHeight="144.0" prefWidth="238.0" text="Total Vehicle" textFill="RED">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" focusTraversable="false" layoutX="696.0" layoutY="7.0" prefHeight="37.0" prefWidth="119.0" style="-fx-border-color: white;" text="2020-01-01" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" focusTraversable="false" layoutX="696.0" layoutY="53.0" prefHeight="37.0" prefWidth="119.0" style="-fx-border-color: white;" text="00:00:00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotVehicle" alignment="CENTER" layoutX="477.0" layoutY="328.0" prefHeight="83.0" prefWidth="98.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="61.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="122.0" layoutY="298.0" prefHeight="144.0" prefWidth="238.0" text="Total Customers" textFill="RED">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotCustomer" alignment="CENTER" layoutX="192.0" layoutY="335.0" prefHeight="83.0" prefWidth="98.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="61.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

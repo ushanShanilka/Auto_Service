@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="580.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UsesFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="179.0" layoutY="19.0" prefHeight="82.0" prefWidth="472.0" style="-fx-border-color: #000080;" text="Uses" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="85.0" layoutX="188.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/3395147-200.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="47.0" layoutY="123.0" opacity="0.91" prefHeight="380.0" prefWidth="736.0" style="-fx-background-color: rgba(55,55,55,0.5);">
+         <children>
+            <TableView fx:id="tblUses" focusTraversable="false" layoutX="34.0" layoutY="91.0" prefHeight="238.0" prefWidth="669.0" style="-fx-background-color: #666362; -fx-border-color: #000080;">
+              <columns>
+                <TableColumn fx:id="colUseCode" prefWidth="87.0" text="Use Code" />
+                <TableColumn fx:id="colCode" prefWidth="77.0" text="Item Code" />
+                  <TableColumn fx:id="colDiscription" prefWidth="174.0" text="Discription" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="81.0" text="UnitPrice" />
+                  <TableColumn fx:id="colQty" prefWidth="77.0" text="Qty" />
+                  <TableColumn fx:id="colTotal" prefWidth="77.0" text="Total" />
+                  <TableColumn fx:id="colOperate" prefWidth="94.0" text="Operate" />
+              </columns>
+            </TableView>
+            <JFXTextField fx:id="txtUseCode" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="72.0" layoutY="14.0" promptText="Use Code" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCode" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="231.0" layoutY="14.0" onAction="#getItem" prefHeight="25.0" prefWidth="138.0" promptText="Item Code" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQty" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="231.0" layoutY="55.0" onAction="#getItemTotal" prefHeight="25.0" prefWidth="138.0" promptText="Qty" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnAdd" focusTraversable="false" layoutX="554.0" layoutY="52.0" onAction="#SaveOnAction" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #EBF4FA;" text="Add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" focusTraversable="false" layoutX="633.0" layoutY="52.0" onAction="#UpdateOnAction" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #EBF4FA;" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtDiscription" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="385.0" layoutY="14.0" promptText="Discription" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtUnitPrice" focusColor="WHITE" focusTraversable="false" layoutX="72.0" layoutY="55.0" prefHeight="25.0" prefWidth="145.0" promptText="UnitPrice" style="-fx-background-color: White;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTotal" focusColor="WHITE" focusTraversable="false" layoutX="387.0" layoutY="55.0" prefHeight="25.0" prefWidth="138.0" promptText="Total" style="-fx-background-color: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnPlace" focusTraversable="false" layoutX="599.0" layoutY="336.0" onAction="#btnPlace" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: #EBF4FA;" text="Place">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
